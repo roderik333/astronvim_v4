@@ -8,19 +8,20 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 
 nvim/lua/plugins/mason.lua
 
-moved from "pyright", "ruff-lsp" to "pyls"
+Moved to "pyright AND "pyls"
+
+Why, because of Rope.
 
 For this to work:
 
 ```sh
 
 PylspInstall python-lsp-ruff
-PylspInstall pylsp-mypy
 PylspInstall pylsp-rope
 
 ```
 
-The [tool.ruff] and [tool.mypy] section in pyproject.toml is honored!
+The [tool.ruff] and [tool.pyright] section in pyproject.toml is honored!
 I can't say that I have gotten [tool.rope] to do anything interresting.
 
 On top of that, I have not been able to make the server section in mason.lua work.
@@ -37,9 +38,7 @@ pylsp ={
 
 I've tried everything... to no avail
 
-Make sure that the [tool.mypy] section has the correct python version **DUH!**
-
-Will try this config for a bit.. to see if I like it better than pyright. The LSP server seems to have some timeout issues.
+Will try this config for a bit.. to see if I like it better than just pyright. The LSP server seems to have some timeout issues.
 
 ## 🛠️ Installation
 

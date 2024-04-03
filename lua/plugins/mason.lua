@@ -12,15 +12,10 @@ return {
 				"lua_ls",
 				"pylsp",
 				"gopls",
+				"pyright",
 				server = {
-					pylsp = {
-						pylsp = {
-							plugins = {
-								rope_autoimport = {
-									enabled = true,
-								},
-							},
-						},
+					pyright = {
+						autoImportCompletion = true,
 					},
 				},
 				-- add more arguments for adding more language servers
