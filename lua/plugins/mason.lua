@@ -11,33 +11,15 @@ return {
 			opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
 				"lua_ls",
 				"pylsp",
+				"gopls",
 				server = {
 					pylsp = {
-						plugins = {
-							ruff = {
-								extendSelect = { "A", "B", "C4", "D", "I", "ERA", "PLR", "SIM", "TCH" },
-								ignore = {
-									"I001",
-									"D101",
-									"D102",
-									"D103",
-									"D107",
-									"D202",
-									"D400",
-									"D401",
-									"D406",
-									"D407",
-									"D412",
-									"D417",
+						pylsp = {
+							plugins = {
+								rope_autoimport = {
+									enabled = true,
 								},
-								showFixes = true,
-								lineLength = 119,
 							},
-						},
-					},
-					ruff_lsp = {
-						resolved_capabilities = {
-							hover = false,
 						},
 					},
 				},

@@ -10,11 +10,20 @@ nvim/lua/plugins/mason.lua
 
 moved from "pyright", "ruff-lsp" to "pyls"
 
-For this to work :Pylspinstall pylsp-ruff
+For this to work:
 
-The [tool.ruff] section in pyproject.toml is honored!
+```sh
 
-I have not been able to make the server section in mason.lua work.
+PylspInstall python-lsp-ruff
+PylspInstall pylsp-mypy
+PylspInstall pylsp-rope
+
+```
+
+The [tool.ruff] and [tool.mypy] section in pyproject.toml is honored!
+I can't say that I have gotten [tool.rope] to do anything interresting.
+
+On top of that, I have not been able to make the server section in mason.lua work.
 
 ```json
 pylsp ={
@@ -26,11 +35,11 @@ pylsp ={
 }
 ```
 
-I've tried everything.
+I've tried everything... to no avail
 
-Also, install mypy.
+Make sure that the [tool.mypy] section has the correct python version **DUH!**
 
-Will try this config for a bit.. to see if I like it better than pyright.
+Will try this config for a bit.. to see if I like it better than pyright. The LSP server seems to have some timeout issues.
 
 ## 🛠️ Installation
 
