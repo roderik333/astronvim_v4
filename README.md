@@ -6,6 +6,12 @@ A template for getting started with [AstroNvim](https://github.com/AstroNvim/Ast
 
 # Note to self.
 
+Tried a lot of stuff..
+
+Tried pyright/ruff, tried pyls/mypy, tried jedi/mypy..
+
+Have landed on pyright/ruff for the time being.
+
 nvim/lua/plugins/mason.lua
 
 Moved to "pyright AND "pyls"
