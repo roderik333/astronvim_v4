@@ -88,6 +88,7 @@ return {
 					desc = "Close buffer",
 				},
 				["<Leader>c"] = false,
+				["<Leader>U"] = { "<cmd>lua require('undotree').toggle()<cr>", desc = "Toggle undotree" },
 				-- quick save
 				-- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
 			},
