@@ -87,11 +87,26 @@ return {
 					end,
 					desc = "Close buffer",
 				},
-				["<Leader>c"] = false,
 				["<Leader>U"] = { "<cmd>lua require('undotree').toggle()<cr>", desc = "Toggle undotree" },
 				["<Leader>-"] = { "<cmd>Oil<cr>", desc = "Open parent directory" },
+				["<Leader>lk"] = { "<cmd>NoiceDismiss<cr>", desc = "Dismiss notification" },
 				-- quick save
 				-- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+				-- COPILOTCHAT
+				["<Leader>c"] = false, -- remove the close buffer command
+				["<Leader>c"] = { desc = "CopilotChat" },
+				["<Leader>cc"] = { ":CopilotChat ", desc = "CopilotChat - Chat with Copilot" },
+				["<Leader>ccb"] = { ":CopilotChatBuffer ", desc = "CopilotChat - Chat with current buffer" },
+				["<Leader>cce"] = { "<cmd>CopilotChatExplain<cr>", desc = "CopilotChat - Explain code" },
+				["<Leader>cct"] = { "<cmd>CopilotChatTests<cr>", desc = "CopilotChat - Generate tests" },
+				["<Leader>ccT"] = { "<cmd>CopilotChatVsplitToggle<cr>", desc = "CopilotChat - Toggle Vsplit" },
+				["<Leader>ccv"] = { ":CopilotChatVisual ", desc = "CopilotChat - Open in vertical split" },
+				["<Leader>ccx"] = { ":CopilotChatInPlace<cr>", desc = "CopilotChat - Run in-place code" },
+				["<Leader>ccf"] = { "<cmd>CopilotChatFixDiagnostic<cr>", desc = "CopilotChat - Fix diagnostic" },
+				["<Leader>ccr"] = {
+					"<cmd>CopilotChatReset<cr>",
+					desc = "CopilotChat - Reset chat history and clear buffer",
+				},
 			},
 			t = {
 				-- setting a mapping to false will disable it
