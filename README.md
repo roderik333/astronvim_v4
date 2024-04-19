@@ -4,47 +4,46 @@
 
 A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
-# Note to self.
+# My config
 
-Tried a lot of stuff..
+Mason install:
 
-Tried pyright/ruff, tried pyls/mypy, tried jedi/mypy..
+- basedpyright
+- ruff-lsp
+- diagnosticls
+- prettierd
+- marksman
+- gofumpt
+- goimport
+- gopls
+- lua-language-server
+- yaml-language-server
 
-Have landed on pyright/ruff for the time being.
+## additional plugins and config.
 
-nvim/lua/plugins/mason.lua
+~/.config/nvim/lua/plugins:
 
-Moved to "pyright AND "pyls"
+- cmp-cmdline.lua - offers completion in nvim commandline
+- codeium.lua - much(!) less intrusive free Copilot alternative
+- git-stuff.lua - blame for every line of code
+- oil.lua - the best file manager, ever
+- trouble.lua - because trouble is best
+- undotree.lua - g-/g+ is nice, undotree is nicer
+- There are minor changes to astrolsp.lua, telescope.lua and user.lua (my own logo)
+- Theme catppuccin-mocha is set in astroui.lua
+- Most, if not all custom keybindings are added to astrocore.lua
 
-Why, because of Rope.
+~/config/nvim/lua:
 
-For this to work:
+- added custom filetype to polish.lua
+- community.lua has some additions
 
-```sh
+## Note to self
 
-PylspInstall python-lsp-ruff
-PylspInstall pylsp-rope
+Stick with ruff-lsp and basedpyrigt for python development
+Makes life easier.
 
-```
-
-The [tool.ruff] and [tool.pyright] section in pyproject.toml is honored!
-I can't say that I have gotten [tool.rope] to do anything interresting.
-
-On top of that, I have not been able to make the server section in mason.lua work.
-
-```json
-pylsp ={
-  settings = {
-    pylsp = {
-    plugins = {
-    },
-  },
-}
-```
-
-I've tried everything... to no avail
-
-Will try this config for a bit.. to see if I like it better than just pyright. The LSP server seems to have some timeout issues.
+# On with the show
 
 ## 🛠️ Installation
 
