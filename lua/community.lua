@@ -10,5 +10,5 @@ return {
 	{ import = "astrocommunity.pack.yaml" },
 	{ import = "astrocommunity.utility.noice-nvim" },
 	--  { import = "astrocommunity.note-taking.neorg" },
-	{ import = "astrocommunity.completion.copilot-lua-cmp" },
+	-- { import = "astrocommunity.completion.copilot-lua-cmp" },
 }
