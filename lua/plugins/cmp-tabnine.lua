@@ -2,7 +2,7 @@ return {
 	{
 		"tzachar/cmp-tabnine",
 		build = "./install.sh",
-		dependencies = { "hrsh7th/nvim-cmp", "codota/tabnine-nvim" },
+		dependencies = { "hrsh7th/nvim-cmp" },
 		config = function()
 			local tabnine = require("cmp_tabnine.config")
 			tabnine:setup({
@@ -28,12 +28,6 @@ return {
 				cmp_tabnine = "[TN]",
 				path = "[Path]",
 			}
-
-			require("cmp").setup({
-				sources = {
-					{ name = "cmp_tabnine" },
-				},
-			})
 		end,
 	},
 }
