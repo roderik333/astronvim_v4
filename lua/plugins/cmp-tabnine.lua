@@ -19,15 +19,15 @@ return {
 				show_prediction_strength = false,
 				min_percent = 0,
 			})
-			local lspkind = require("lspkind")
-
-			local source_mapping = {
-				buffer = "[Buffer]",
-				nvim_lsp = "[LSP]",
-				nvim_lua = "[Lua]",
-				cmp_tabnine = "[TN]",
-				path = "[Path]",
-			}
+			-- local lspkind = require("lspkind")
+			--
+			-- local source_mapping = {
+			-- 	buffer = "[Buffer]",
+			-- 	nvim_lsp = "[LSP]",
+			-- 	nvim_lua = "[Lua]",
+			-- 	cmp_tabnine = "[TN]",
+			-- 	path = "[Path]",
+			-- }
 		end,
 	},
 }
