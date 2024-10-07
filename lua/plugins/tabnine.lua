@@ -1,7 +1,7 @@
 -- Build Tabnine Chat
 -- After lazy install, and no errors..
 --
--- $ cd ~/.local/share/nvim/plugins/tabnine/chat
+-- $ cd ~/.local/share/nvim/lazy/tabnine-nvim/chat
 -- $ sudo dnf install cargo
 -- $ sudo dnf install glib2-devel
 -- $ sudo dnf install pango-devel
@@ -19,12 +19,12 @@ return {
 		config = function()
 			require("tabnine").setup({
 				disable_auto_comment = true,
-				accept_keymap = "<Tab>",
-				dismiss_keymap = "<C-]>",
+				accept_keymap = "<C-t>",
+				dismiss_keymap = "<C-l>",
 				debounce_ms = 800,
 				suggestion_color = { gui = "#808080", cterm = 244 },
 				exclude_filetypes = { "TelescopePrompt", "NvimTree" },
-				log_file_path = nil, -- absolute path to Tabnine log file
+				log_file_path = "/tmp/tabnine.log", -- absolute path to Tabnine log file
 			})
 		end,
 	},
