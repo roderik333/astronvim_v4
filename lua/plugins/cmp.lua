@@ -7,6 +7,8 @@ return { -- override nvim-cmp plugin
 		-- the function is lazy loaded so cmp is able to be required
 		local cmp = require("cmp")
 		local lspkind = require("lspkind")
+		-- opts.mapping["<C-j>"] = cmp.mapping.select_next_item()
+		-- opts.mapping["<C-k>"] = cmp.mapping.select_prev_item()
 		-- modify the sources part of the options table
 		opts.sources = cmp.config.sources({
 			{ name = "cmp_tabnine", priority = 1000 },
