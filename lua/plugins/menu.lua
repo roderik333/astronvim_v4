@@ -1,6 +1,7 @@
 return {
-	{ "nvchad/volt", lazy = true },
-	{ "nvchad/menu", lazy = true },
+	{ "nvchad/volt",  lazy = true },
+	{ "nvchad/menu",  lazy = true },
+	{ "nvchad/minty", lazy = true },
 	vim.keymap.set("n", "<RightMouse>", function()
 		vim.cmd.exec('"normal! \\<RightMouse>"')
 
