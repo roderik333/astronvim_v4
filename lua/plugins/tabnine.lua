@@ -12,6 +12,8 @@
 -- $ sudo dnf install gtk3-devel
 -- $ sudo dnf install webkit2gtk4.1-devel
 -- $ cargo build --release
+-- If tabninechat stops working.. or if anything is off.
+-- run ~/.local/share/nvim/lazy/tabnine-nvim/dl_binaries.sh manualy and rebuild chat
 return {
 	{
 		"codota/tabnine-nvim",
